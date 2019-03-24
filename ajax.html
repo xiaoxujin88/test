@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> ajax示例 </title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <script type="text/javascript">
+	function checkUserExists(){
+		alert("ok");
+		//var form = document.form
+		//var username = form.username.value;
+		var username = document.getElementById("username").value;
+		alert("ok2");
+		if(username==""){
+			alert("用户名不能为空！");
+			//form.username.focus();
+			document.getElementById("username").focus();
+
+			return false;
+
+			//发送请求到服务器，判断用户是否存在
+			//......ajax代码
+		}
+
+
+	}
+  </script>
+ </head>
+
+ <body>
+  <center>
+	<form method="post" action="">
+		<input type="text" id="username" name="username" onblur="return checkUserExists(this)" /><span id="msg"></span>
+	</form>
+	
+  </center>
+ </body>
+</html>

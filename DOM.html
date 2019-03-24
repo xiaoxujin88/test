@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+  <p id="me">你好世界</p>
+  <p>我爱中国</p>
+  <p name="he">社会主义国家</p>
+  <input type="text" name="he">
+  <p class="in">社会主义国家</p>
+  <script type="text/javascript">
+	//1.通过Id找HTML元素
+	var a = document.getElementById("me");
+	//alert(x.innerHTML);
+	document.write(a.innerHTML+"</br>");
+
+	//2.通过元素name熟悉感找对象，返回数组。注意，name属性一般只有表单元素才有，<p>的name属性是无效的。
+	var b = document.getElementsByName("he");
+	document.write("有："+b.length+"个name为he的有效元素</br>");
+	//document.write("有"+b.length+"名称为he的段落"+"</br>");
+
+	//3.通过标签名找HTML元素，多个将返回数组
+	var c = document.getElementsByTagName("p");
+	document.write("有"+c.length+"个段落"+"</br>");
+
+	//4.通过类名找到对象，返回数组
+	var d = document.getElementsByClassName("in");
+	document.write("有"+d.length+"个类名段落");
+  </script>
+
+
+ </body>
+</html>
